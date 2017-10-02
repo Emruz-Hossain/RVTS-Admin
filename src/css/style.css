@@ -1,0 +1,35 @@
+
+#admin-profile{
+ margin:5px;
+ height: 40px;
+ width: 40px;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.template{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f1f1f1;
+    min-height: 650px;
+}
+.endangered-list{
+    padding: 0px;
+    margin: 0px;
+}
+.div-head{
+    background-color: black;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+.db_table_holder{
+    max-height: 500px;
+    overflow: auto;
+}
+.db_card_head{
+    padding: 5px;
+    margin: 0px;
+}

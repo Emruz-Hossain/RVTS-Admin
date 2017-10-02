@@ -1,0 +1,89 @@
+<!-------------Top Cards-------------------->
+<div class="row text-center">
+    <table class="col-sm-2 w3-card table-bordered w3-margin w3-white">
+        <th class="text-center w3-teal w3-padding">Number of Running Vessel</th>
+        <tr>
+            <th class="text-center">
+                <h1 id="db_card_running_vessel"></h1>
+            </th>
+        </tr>
+    </table>
+    <table class="col-sm-2 w3-card table-bordered w3-margin w3-white">
+        <th class="text-center w3-teal w3-padding">Number of Stopped Vessel</th>
+        <tr>
+            <th class="text-center">
+                <h1 id="db_card_stopped_vessel"></h1>
+            </th>
+        </tr>
+    </table>
+    <table class="col-sm-2 w3-card table-bordered w3-margin w3-white">
+        <th class="text-center w3-teal w3-padding">Number of Registered Vessel</th>
+        <tr>
+            <th class="text-center">
+                <h1>50</h1>
+            </th>
+        </tr>
+    </table>
+    <table class="col-sm-2 w3-card table-bordered w3-margin w3-white">
+        <th class="text-center w3-teal w3-padding">Number of Registered Owner</th>
+        <tr>
+            <th class="text-center">
+                <h1>10</h1>
+            </th>
+        </tr>
+    </table>
+    <table class="col-sm-2 w3-card table-bordered w3-margin w3-white">
+        <th class="text-center w3-teal w3-padding">Number of Registered Driver</th>
+        <tr>
+            <th class="text-center">
+                <h1>30</h1>
+            </th>
+        </tr>
+    </table>
+
+</div>
+<!------------------ Endangered Vessel -------------->
+<div class="col-sm-12 w3-card w3-white text-center endangered-list w3-margin" id="endangered_div">
+    <table class="col-sm-12 w3-card w3-red">
+        <th class="w3-red text-center">List of Endangered Vessel<br> (click on row to view in map)</th>
+        <tr>
+            <table id="endangered_list" class="w3-table table-bordered">
+                <thead>
+
+                    <th>Vessel Name</th>
+                    <th>Destination</th>
+                    <th>Load Status</th>
+                    <th>Lattitude</th>
+                    <th>Longitude</th>
+                </thead>
+                <tbody id="endangered_table_body">
+
+                </tbody>
+            </table>
+        </tr>
+    </table>
+</div>
+<div class="col-sm-12 w3-card w3-white text-center">
+    <h4>List of Running Vessels</h4>
+    <hr>
+    <div class="db_table_holder">
+        <table class="table-striped w3-table w3-white table-bordered">
+            <thead class="w3-teal">
+                <th>SL.</th>
+                <th>Vessel Name</th>
+                <th>Destination</th>
+                <th>Load Status</th>
+                <th>Load Percentage</th>
+                <th>Lattitude</th>
+                <th>Longitude</th>
+                <th>Speed</th>
+            </thead>
+            <tbody id="db_tbody">
+                <script>
+                    adminDashboard();
+                </script>
+
+            </tbody>
+        </table>
+    </div>
+</div>
