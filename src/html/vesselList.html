@@ -1,0 +1,21 @@
+<button type="button" class="btn  w3-teal btn-sm w3-margin" style="float: right;"><span class="ion-android-add-circle"></span> Add Vessel</button>
+<div class="w3-card w3-white col-lg-12 card_vessel_list" style="padding: 0px; max-height: 550px;overflow: auto;">
+    <h4 class="text-center">Registered Vessel List </h4>
+    <table class="w3-table table-bordered table-striped table-hover" id="vessel_info_table">
+        <thead class="w3-teal">
+            <th>ID</th>
+            <th>Vessel Name</th>
+            <th>Lisence No.</th>
+            <th>Category</th>
+            <th>Max Capacity</th>
+            <th>Dimension</th>
+            <th>OwnerID</th>
+            <th>DriverID</th>
+        </thead>
+        <tbody id="vessel_list_tbody">
+            <script>
+                vesselInfo();
+            </script>
+        </tbody>
+    </table>
+</div>

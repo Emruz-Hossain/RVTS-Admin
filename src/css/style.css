@@ -33,3 +33,20 @@
     padding: 5px;
     margin: 0px;
 }
+.card_vessel_list{
+    padding: 0px;
+    background-color: red;
+}
+.paddin_less{
+    padding: 0px;
+}
+.margin_less{
+    margin: 0px;
+}
+.vessel_info_table{
+    max-height: 300px;
+    overflow: auto;
+}
+#single_vessel_info_holder{
+    margin-left: 20%;
+}

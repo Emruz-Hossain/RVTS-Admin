@@ -33,7 +33,7 @@ if($result->num_rows > 0)
         $response->id = $row["DriverID"];
         $response->firstName = $row["FirstName"];
         $response->lastName = $row["LastName"];
-        $response->drvingLisenceNo = $row["DrivingLisenceNo"];
+        $response->drivingLisenceNo = $row["DrivingLisenceNo"];
         $response->experience=$row["Experience"];
         $response->phoneNo = $row["PhoneNo"];
 

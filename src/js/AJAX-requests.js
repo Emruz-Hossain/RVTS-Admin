@@ -88,7 +88,7 @@ function vesselInfo()
         if (this.readyState == 4 && this.status==200)
         {
             var response = JSON.parse(this.responseText);
-           
+            showRegisteredVessel(response);
         }    
     }
     xhttp.open("GET", "./src/php/RVTS-Admin_vesselInfo.php", true);
@@ -142,7 +142,7 @@ function ownerInfo()
         if (this.readyState == 4 && this.status==200)
         {
             var response = JSON.parse(this.responseText);
-            console.log(response);
+            showOwnerList(response);
         }    
     }
     xhttp.open("GET", "./src/php/RVTS-Admin_ownerInfo.php", true);
@@ -193,7 +193,7 @@ function driverInfo()
         if (this.readyState == 4 && this.status==200)
         {
             var response = JSON.parse(this.responseText);
-            console.log(response);
+           showDriverList(response);
         }    
     }
     xhttp.open("GET", "./src/php/RVTS-Admin_driverInfo.php", true);

@@ -49,6 +49,22 @@ function Start()
 
 }
 
+function loadVesselList()
+{
+    setActive("#navVessel");
+    $("#template").load("./src/html/vesselList.html");
+}
+
+function loadOwnerList() {
+    setActive("#navOwner");
+    $("#template").load("./src/html/ownerList.html");
+}
+
+function loadDriverList() {
+    setActive("#navDriver");
+    $("#template").load("./src/html/driverList.html");
+}
+
 function setActive(id) {
 
     //-------Set all nav link as inactive----------------
@@ -62,4 +78,57 @@ function setActive(id) {
     $(id).addClass("active");
 
 
+}
+
+
+function showRegisteredVessel(data) {
+    for (var i = 1; i <= data.length; i++) {
+
+        $("#vessel_list_tbody").append("<tr><td>" + data[i - 1].id + "</td><td>" + data[i - 1].name + "</td><td>" + data[i - 1].lisenceNo + "</td><td>" + data[i - 1].category + "</td><td>" + data[i - 1].maxCapacity + " tons</td><td>" + data[i - 1].dimension + "</td><td>" + data[i - 1].ownerID + "</td><td>" + data[i - 1].driverID + "</td></tr>");
+    }
+    var table = document.getElementById("vessel_info_table");
+    if (table != null)
+    {
+        for (var i = 0; i < table.rows.length; i++)
+        {
+           
+            table.rows[i].onclick = function () {
+                var info=[];
+                info[0] = $(this).find(':nth-child(1)').text();
+                info[1] = $(this).find(':nth-child(2)').text();
+                info[2] = $(this).find(':nth-child(3)').text();
+                info[3] = $(this).find(':nth-child(4)').text();
+                info[4] = $(this).find(':nth-child(5)').text();
+                info[5] = $(this).find(':nth-child(6)').text();
+                info[6] = $(this).find(':nth-child(7)').text();
+                info[7] = $(this).find(':nth-child(8)').text();
+                 showSingleVesselInfo(info);
+            }
+        }    
+    }    
+}
+
+function showSingleVesselInfo(info) {
+    $("#template").load("./src/html/singleVesselInfo.html");
+    setTimeout(function () {
+        $("#svi-id").text(info[0]);
+        $("#svi-name").text(info[1]);
+        $("#svi-lisence").text(info[2]);
+        $("#svi-category").text(info[3]);
+        $("#svi-capacity").text(info[4]);
+        $("#svi-dimension").text(info[5]);
+    },100);
+}
+
+function showOwnerList(data) {
+    for (var i = 1; i <= data.length; i++) {
+
+        $("#owner_list_tbody").append("<tr><td>" + data[i - 1].id + "</td><td>" + data[i - 1].firstName + " " + data[i - 1].lastName + "</td><td>" + data[i - 1].address + "</td><td>" + data[i - 1].phoneNo + "</td></tr>");
+    }
+}
+function showDriverList(data) {
+    for (var i = 1; i <= data.length; i++) {
+
+        $("#driver_list_tbody").append("<tr><td>" + data[i - 1].id + "</td><td>" + data[i - 1].firstName + " " + data[i - 1].lastName + "</td><td>"+data[i-1].drivingLisenceNo+"</td><td>"+data[i-1].experience+"</td><td>" + data[i - 1].phoneNo + "</td></tr>");
+    }
 }

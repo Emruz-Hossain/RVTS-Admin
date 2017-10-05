@@ -28,9 +28,9 @@
                <ul class="nav navbar-nav">
                   <li class="nav" onclick="Start();" id="navDB"><a href="#"><span class="ion-home"></span> Dhashboard</a></li>
                   <li class="nav" onclick="loadMap();" id="navMap"><a href="#"><span class="ion-map"></span> Map</a> </li>
-                  <li class="nav" onclick="" id="navVessel"><a href="#"><span class="ion-android-boat"></span> Vessel</a> </li> 
-                  <li class="nav" onclick="" id="navOwner"><a href="#"><span class="ion-ios-contact-outline"></span> Owner</a></li>
-                  <li class="nav" onclick="" id="navDriver"><a href="#"><span class="ion-model-s"></span> Driver</a></li>
+                  <li class="nav" onclick="loadVesselList();" id="navVessel"><a href="#"><span class="ion-android-boat"></span> Vessel</a> </li> 
+                  <li class="nav" onclick="loadOwnerList();" id="navOwner"><a href="#"><span class="ion-ios-contact-outline"></span> Owner</a></li>
+                  <li class="nav" onclick="loadDriverList();" id="navDriver"><a href="#"><span class="ion-model-s"></span> Driver</a></li>
                </ul>
                <ul class="nav navbar-nav navbar-right">
                    <li class="nav"><img src="./resources/profile.jpg" alt="" id="admin-profile" class="img-circle"></li>
@@ -41,10 +41,9 @@
        </div>
    </nav>
    <div class="container-fluid template" id="template">
-  
-    <!-- <script>
-        Start();
-    </script> -->
+       <script>
+           Start();
+       </script>
    </div>
 
     <!-- <script>
