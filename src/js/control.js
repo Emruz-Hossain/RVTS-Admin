@@ -1,6 +1,7 @@
 var lat, lng, vname;
 function dashboardAddRow(data)
 {
+    console.log("Hi...");
     var runnigVessel = data.length;
     var registeredVessel = 50;
     var endangered_flag = 0;
@@ -29,7 +30,9 @@ function dashboardAddRow(data)
     $("#db_card_running_vessel").text(runnigVessel);
     $("#db_card_stopped_vessel").text(registeredVessel - runnigVessel);
     if (endangered_flag == 1)
-        $("#endangered_div").css("display", "block");    
+        $("#endangered_div").css("display", "block");
+   
+    autoRefresh();
 }
 function showEndangeredVesselInMap()
 {
@@ -131,4 +134,13 @@ function showDriverList(data) {
 
         $("#driver_list_tbody").append("<tr><td>" + data[i - 1].id + "</td><td>" + data[i - 1].firstName + " " + data[i - 1].lastName + "</td><td>"+data[i-1].drivingLisenceNo+"</td><td>"+data[i-1].experience+"</td><td>" + data[i - 1].phoneNo + "</td></tr>");
     }
+}
+
+function autoRefresh() {
+    console.log("Auto refreshed called..");
+//     loacation.reload();
+//     console.log("Refreshed..");    
+// setInterval(function () {
+//     autoRefresh();
+//     },5000);
 }
